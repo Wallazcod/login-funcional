@@ -7,7 +7,7 @@ from .models import Usuario
 #  ver informaçoes da pasta usuarios, pasta HTML home
 
 def home(request):
-    return render(request,'usuarios/index.html')
+    return render(request,'usuarios/home.html')
 
 def usuarios(request):
     novo_usuario = Usuario()

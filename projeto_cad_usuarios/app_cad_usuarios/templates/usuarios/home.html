@@ -1,0 +1,45 @@
+
+
+<!-- onde vai ser renderizado esse codigo: dentro do block que está na pasta BASE.HTML -->
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<!-- <form action="{% url 'listagem_usuarios' %}" method="post">
+  {% csrf_token %}
+  <div style="text-align: center;" class="container">
+    <h1>Cadastro de Usuários</h1>
+    Nome<input name="nome" class="form-control-sm" type="text">
+    Idade<input name="idade" class="form-control-sm" type="text">
+    <button class="form-control-sm">Entrar</button>
+  </div>
+</form> -->
+
+<div class="wrapper">
+
+  <form action="{% url 'listagem_usuarios' %}" method="post">
+    {% csrf_token %}
+    <h1>Login</h1>
+
+    <div class="input-box">
+      <input name="nome" type="text" placeholder="Seu nome" required>
+      <i class='bx bxs-user' ></i>
+    </div>
+
+    <div class="input-box">
+      <input name="idade" type="text" placeholder="Idade" required>
+      <i class='bx bxs-lock-alt' ></i>
+    </div>
+    
+    <div class="remember-forgot">
+          <label><input type="checkbox">Lembre sempre</label>
+          <a href="#">Esqueceu a senha?</a>
+    </div>
+
+    <button type="submit" class="btn">Login</button>
+
+    <div class="register-link">
+      <p>Não tem uma conta?<a href="#">Registre-se</a></p>
+    </div>
+  </form>
+
+</div>
+{% endblock %}
